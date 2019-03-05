@@ -1,0 +1,151 @@
+%
+%         File: <++>.tex
+%  Description: <++>
+%       Author: Bernhard Stankwitz <be5tan@posteo.de>
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[a4paper,11pt]{article} %{{{
+
+%{{{ Packages
+%===============================================================================
+\usepackage[cm]{fullpage}                     % Small margins
+\usepackage[english]{babel}
+\usepackage[numbers]{natbib}                  % Bibtex
+\usepackage{fontspec}                         % Xetex and bolder font
+\usepackage{amssymb}                          % Mathbb
+\usepackage{amsthm}	                          % Theoremstyle proof environmen
+\usepackage{amsmath}
+\usepackage{upgreek}                          % Second upper case Theta
+\usepackage{mathrsfs}
+\usepackage{graphicx}                         % Figures
+\usepackage{float}                            % Figures
+\usepackage{enumitem}
+\usepackage{xcolor}                           % Colors 
+\usepackage{sectsty}                          % Individually colored sections
+\usepackage{hyperref}
+%}}}
+
+%{{{ Color options
+%===============================================================================
+\definecolor{gruvbg}{HTML}{282828}
+\definecolor{gruvfg}{HTML}{ebdbb2}
+\definecolor{gruvyellow}{HTML}{d79921}
+\definecolor{gruvred}{HTML}{cc241d}
+\definecolor{gruvblue}{HTML}{458588}
+\definecolor{gruvgreen}{HTML}{98971a}
+
+\pagecolor{gruvbg}                            % background color
+\color{gruvfg}                                % foreground color
+\sectionfont{\color{gruvyellow}}              % Sets color of sections
+\subsectionfont{\color{gruvyellow}}           % Sets color of subsections
+\hypersetup{
+    linktocpage = true,
+    colorlinks = true,                        % Colors the border
+    linkcolor = gruvred,
+    citecolor = gruvgreen,
+    urlcolor = gruvblue
+}
+
+\numberwithin{equation}{section}
+% \setcounter{section}{+1}                    % Contral Chapter number
+%}}}
+
+%{{{ Math operators
+%===============================================================================
+\DeclareMathOperator*{\argmin}{arg\!\min}
+\DeclareMathOperator*{\argmax}{arg\!\max}
+\DeclareMathOperator*{\vspan}{span}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\im}{im}
+\DeclareMathOperator*{\rk}{rk}
+\DeclareMathOperator*{\kl}{KL}
+\DeclareMathOperator*{\Bin}{Bin}
+\DeclareMathOperator*{\Poi}{Poi}
+\DeclareMathOperator*{\CPoi}{CPoi}
+\DeclareMathOperator*{\Unif}{Unif}
+\DeclareMathOperator*{\Exp}{Exp}
+\DeclareMathOperator*{\sgn}{sgn}
+\DeclareMathOperator*{\co}{co}
+\DeclareMathOperator*{\inn}{int}
+\DeclareMathOperator*{\dom}{dom}
+\DeclareMathOperator*{\epi}{epi}
+\DeclareMathOperator*{\conv}{Conv}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator*{\asin}{asin}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\atan}{atan}
+\DeclareMathOperator*{\acot}{acot}
+%}}}
+
+%{{{ Theoremstyles
+%===============================================================================
+\newtheoremstyle{ndefinition}  % Name 
+  {\topsep}                    % Space above theorem, e.g. 3pt
+  {\topsep}                    % Space below theorem, e.g. 3pt
+  {\color{gruvblue}}           % Font in body of theorem
+  {0pt}                        % Space to indent
+  {\bfseries\color{gruvblue}}  % Name of head font
+  {.}                          % Punctuation between head and body
+  { }                          % Space after theorem head; " " = normal interword space
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\newtheoremstyle{nplain}
+  {\topsep}
+  {\topsep}
+  {\itshape\color{gruvblue}}
+  {0pt}
+  {\bfseries\color{gruvblue}}
+  {.}
+  { }
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\newtheoremstyle{nremark}
+  {\topsep}
+  {\topsep}
+  {}
+  {0pt}
+  {\itshape\color{gruvblue}}
+  {.}
+  { }
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\renewenvironment{proof}
+  {{\noindent \itshape \color{gruvblue} Proof. }}{\color{gruvblue}\qed}
+
+\theoremstyle{ndefinition}
+\newtheorem{defi}{Definition}[section]
+\newtheorem{exer}[defi]{Exercise}
+\newtheorem{aufg}[defi]{Aufgabe}
+\newtheorem{alg}[defi]{Algorithm}
+  
+\theoremstyle{nremark}
+\newtheorem{expl}[defi]{Example}
+\newtheorem{bsp}[defi]{Beispiel}
+\newtheorem{bem}[defi]{Bemerkung}
+\newtheorem{rem}[defi]{Remark}
+
+\theoremstyle{nplain}
+\newtheorem{lem}[defi]{Lemma}
+\newtheorem{stz}[defi]{Satz}
+\newtheorem{cor}[defi]{Corollary}
+\newtheorem{thm}[defi]{Theorem}
+\newtheorem{prp}[defi]{Proposition}
+%}}}
+
+%}}}
+
+
+\begin{document}
+\title{<++>}
+\author{Bernhard Stankewitz \\ \texttt{bernhard.stankewitz@posteo.de}}
+\maketitle
+\abstract{<++>}
+\tableofcontents
+
+<++>
+
+
+% \bibliographystyle{plainnat}
+% \bibliography{references.bib}
+
+\end{document}
