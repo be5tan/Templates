@@ -34,6 +34,8 @@
 \definecolor{gruvred}{HTML}{cc241d}
 \definecolor{gruvblue}{HTML}{458588}
 \definecolor{gruvgreen}{HTML}{98971a}
+\definecolor{gruvpurple}{HTML}{b16286}
+\definecolor{gruvgray}{HTML}{a89984}
 
 \pagecolor{gruvbg}                            % background color
 \color{gruvfg}                                % foreground color
@@ -122,6 +124,8 @@
 \newtheorem{bsp}[defi]{Beispiel}
 \newtheorem{bem}[defi]{Bemerkung}
 \newtheorem{rem}[defi]{Remark}
+\newtheorem{proofx}[defi]{Proof}
+\newenvironment{prfx}{\pushQED{\color{gruvblue}\qed}\proofx}{\popQED\endproofx}
 
 \theoremstyle{nplain}
 \newtheorem{lem}[defi]{Lemma}
